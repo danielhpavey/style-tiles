@@ -93,12 +93,12 @@ hr {
 
 .logo {
   background-position: center;
-  background-image: -webkit-gradient(linear, left 60%, left 100%, from(#203c5f), to(#19324a));
-  background-image: -webkit-linear-gradient(top, #203c5f 60%, #19324a 100%);
-  background-image: -moz-linear-gradient(top, #203c5f 60%, #19324a 100%);
-  background-image: linear-gradient(to bottom, #203c5f 60%, #19324a 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF203C5F', endColorstr='#FF19324A', GradientType=0); }
+  background-image: -webkit-linear-gradient(#19324a, #203c5f, #19324a);
+  background-image: -o-linear-gradient(#19324a, #203c5f, #19324a);
+  background-image: -moz-linear-gradient(#19324a, #203c5f, #19324a);
+  background-image: linear-gradient(#19324a, #203c5f, #19324a);
+  background-repeat: no-repeat;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF19324A', endColorstr='#FF203C5F', GradientType=1); }
 
 .logo img {
   width: 100%; }
