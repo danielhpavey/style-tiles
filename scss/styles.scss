@@ -3,13 +3,13 @@
 @import "partials/transitions";
 @import "partials/threecolorgradient";
 
-$color-one: 	#203c5f;
-$gradient: 	#19324a;
-$color-two: 	#217da0;
-$color-three: 	#c6571b;
-$color-four: 	#83af52;
-$color-five:	#3d3c3a;
-$bgimage:	'../images/linedpaper.png';
+$color-one: 	#ffffff;	
+$gradient: 	#ffffff;	
+$color-two: 	#ffffff;	
+$color-three: 	#ffffff;	
+$color-four: 	#ffffff;	
+$color-five:	#646464;
+$bgimage:	'';
 @include font-face( Nexa-Light, 'fonts', Nexa_Free_Light-webfont);
 $body-font: Nexa-Light;
 
@@ -19,37 +19,19 @@ $body-font: Nexa-Light;
 * { 
 -webkit-box-sizing: border-box;  
 }
-.cf:before,
-.cf:after {
-    content: " ";
-    display: table;
-}
-.cf:after {
-    clear: both;
-}
-.cf {
-    *zoom: 1;
-}
+
 body {
 	background: white;
-	width: 1200px;
+	width: 95%;
 	margin: 0 auto;
 	font-family: arial;
 	font-size:16px;
-}
-.wrap {
-	position: relative;
-	background: url($bgimage);
-	margin: 1em 0;
-	padding: 0.5em;
-	height: 1400px;
-	-webkit-box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.75);
 }
 h1.main-titles {
 	margin: 1em;
 }
 .main-titles, h3 {
-	margin: 0;
+	margin: 0 0 10px 0;
 	color:  $color-five;
 	text-align: center;
 }
@@ -59,22 +41,19 @@ h1.main-titles {
 }
 hr {
 	margin: 2em 0;
-    border: 0;
-    height: 1px;
-    border-bottom: 1px dashed #333;
+	border: 0;
+	height: 1px;
+	border-bottom: 1px dashed #333;
 }
-#right-column {
-	height: 900px;
-	margin-left: 50%;
-	max-width: 50%;
+.column {
+	width: 100%;
 	padding: 0.5em;
 	color: $color-five;
-}
-#left-column {
-	height: 900px;
-	width: 50%;
-	float: left;
-	padding: 0.5em;
+
+	@media screen and (min-width: 1024px){
+	float:left;
+	width:50%;
+	}
 }
 
 /* --------------------------------------------
@@ -86,7 +65,6 @@ hr {
 	margin: 0 0 1em 0;
 	padding: 2%;
 	height: auto;
-	width: 575px;
 	border: 1px dashed #333;
 	background: white;
 }
@@ -106,8 +84,6 @@ hr {
 
 .logo {
 	background-position: center;
-//	@include gradient-vertical($color-one, $gradient, 60%, 100%);
-	@include threecolorgradient($gradient, $color-one, $gradient);
 }
 
 .logo img {
@@ -115,123 +91,129 @@ hr {
 }
 
 .colours { /* height of colours tile */
-	height: 242px;
+	min-height: 262px;
 	text-align: center;
 }
-	.pallets { /* global colour pallet size */
-		height: 220px;
-		width: 100px;
-		border: 8px solid white;
-		display: inline-block;
-		margin: 0 4px;
-		-webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.75);
-	}
+.pallets { /* global colour pallet size */
+	height: 220px;
+	width: 100px;
+	border: 8px solid white;
+	display: inline-block;
+	margin: 0 4px;
+	-webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.75);
+}
 
-	/* individual pallet colours - 1 to 5 */
+/* individual pallet colours - 1 to 5 */
 
-	.colour-one {
-		background:$color-one; 
-	}
-	.colour-two {
-		background: $color-two;
-	}
-	.colour-three {
-		background: $color-three;
-	}
-	.colour-four {
-		background: $color-four;
-	}
-	.colour-five {
-		background: $color-five;
-	}
+.colour-one {
+	background:$color-one; 
+}
+.colour-two {
+	background: $color-two;
+}
+.colour-three {
+	background: $color-three;
+}
+.colour-four {
+	background: $color-four;
+}
+.colour-five {
+	background: $color-five;
+}
 
-	.colour-hex-title { /* hex values of eact colour pallet */
-		font-size: 0.8em;
-		text-align: center;
-		height: 30px;
-		width: 109px;
-		border: 8px solid white;
-		display: inline-block;
-	}
+.colour-hex-title { /* hex values of eact colour pallet */
+	font-size: 0.8em;
+	text-align: center;
+	height: 30px;
+	width: 109px;
+	border: 8px solid white;
+	display: inline-block;
+}
 
-	.fonts h1{
-		font-size:2em;
-	}
+.titles{
+	text-align:center;
+}
+
+.fonts h1{
+	font-size:2em;
+}
 
 
-	.fonts h2 {
-		font-size: 1.5em;
-	}
+.fonts h2 {
+	font-size: 1.5em;
+}
 
-	.fonts li{
-		font-family:$body-font;
-		font-size:1.1em;
-		list-style:none;
-		position:relative;
-		margin:5px 0;
-	}
+.fonts li{
+	font-family:$body-font;
+	font-size:1.1em;
+	list-style:none;
+	position:relative;
+	margin:5px 0;
+}
 
-	.fonts li:before{
-		content:"\2022";
-		font-size:2em;
-		position:absolute;
-		left:-0.5em;
-		top:-0.3em;
-		color:$color-four;
-	}
+.fonts li:before{
+	content:"\2022";
+	font-size:2em;
+	position:absolute;
+	left:-0.5em;
+	top:-0.3em;
+	color:$color-four;
+}
 
-	.fonts p , .fonts a{
-		font-family:$body-font;
-		font-size: 1.1em;
-		letter-spacing:0.05em;
-	}
+.fonts p , .fonts a{
+	font-family:$body-font;
+	font-size: 1.1em;
+	letter-spacing:0.05em;
+}
 
-	.fonts a{
-		color:inherit;
-		font-family:inherit;
- @include transition('all', '2s','ease-in-out');
-	}
+.fonts a{
+	color:inherit;
+	font-family:inherit;
+	 @include transition('all', '2s','ease-in-out');
+}
 
-	.fonts a:hover, .fonts a:focus{
-		color:$color-three;
-	}
+.fonts a:hover, .fonts a:focus{
+	color:$color-three;
+}
 
 .textures { /* height of textures tile */
-	height: 242px;
+	min-height: 262px;
 	text-align: center;
 }
-	.texture { /* global colour pallet size */
-		height: 220px;
-		width: 100px;
-		border: 8px solid white;
-		display: inline-block;
-		margin: 0 4px;
-		-webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.75);
-	}
+.texture { /* global colour pallet size */
+	min-height: 250px;
+	width:20%;
+	max-width: 100px;
+	border: 8px solid white;
+	display: inline-block;
+	margin: 0 4px;
 
-	/* individual pallet colours - 1 to 5 */
+}
 
-	.texture-one {
-		background: url($bgimage); /* placeholder */
-	}
-	.texture-two {
-		background: url($bgimage); /* placeholder */
-	}
-	.texture-three {
-		background: url($bgimage); /* placeholder */
-	}
-	.texture-four {
-		background: url($bgimage); /* placeholder */
-	}
-	.texture-five {
-		background: url($bgimage); /* placeholder */
-	}
+/* individual pallet colours - 1 to 5 */
 
-	.texture-title { /* hex values of eact colour pallet */
-		font-size: 0.8em;
-		text-align: center;
-		height: 30px;
-		width: 109px;
-		border: 8px solid white;
-		display: inline-block;
-	}
+.texture-one {
+	background: url($bgimage); /* placeholder */
+}
+.texture-two {
+	background: url($bgimage); /* placeholder */
+}
+.texture-three {
+	background: url($bgimage); /* placeholder */
+}
+.texture-four {
+	background: url($bgimage); /* placeholder */
+}
+.texture-five {
+	background: url($bgimage); /* placeholder */
+}
+
+.texture-title { /* hex values of eact colour pallet */
+	font-size: 0.8em;
+	text-align: center;
+	height: 30px;
+	width:20%;
+	max-width: 100px;
+	border: 8px solid white;
+	display: inline-block;
+}

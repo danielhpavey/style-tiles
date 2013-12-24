@@ -11,38 +11,19 @@
 * {
   -webkit-box-sizing: border-box; }
 
-.cf:before,
-.cf:after {
-  content: " ";
-  display: table; }
-
-.cf:after {
-  clear: both; }
-
-.cf {
-  *zoom: 1; }
-
 body {
   background: white;
-  width: 1200px;
+  width: 95%;
   margin: 0 auto;
   font-family: arial;
   font-size: 16px; }
-
-.wrap {
-  position: relative;
-  background: url("../images/linedpaper.png");
-  margin: 1em 0;
-  padding: 0.5em;
-  height: 1400px;
-  -webkit-box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.75); }
 
 h1.main-titles {
   margin: 1em; }
 
 .main-titles, h3 {
-  margin: 0;
-  color: #3d3c3a;
+  margin: 0 0 10px 0;
+  color: #646464;
   text-align: center; }
 
 .web-link {
@@ -55,18 +36,14 @@ hr {
   height: 1px;
   border-bottom: 1px dashed #333; }
 
-#right-column {
-  height: 900px;
-  margin-left: 50%;
-  max-width: 50%;
+.column {
+  width: 100%;
   padding: 0.5em;
-  color: #3d3c3a; }
-
-#left-column {
-  height: 900px;
-  width: 50%;
-  float: left;
-  padding: 0.5em; }
+  color: #646464; }
+  @media screen and (min-width: 1024px) {
+    .column {
+      float: left;
+      width: 50%; } }
 
 /* --------------------------------------------
  	|| start of design tiles for this site || 
@@ -77,7 +54,6 @@ hr {
   margin: 0 0 1em 0;
   padding: 2%;
   height: auto;
-  width: 575px;
   border: 1px dashed #333;
   background: white; }
 
@@ -92,20 +68,14 @@ hr {
   font-family: 'Merriweather', serif; }
 
 .logo {
-  background-position: center;
-  background-image: -webkit-linear-gradient(#19324a, #203c5f, #19324a);
-  background-image: -o-linear-gradient(#19324a, #203c5f, #19324a);
-  background-image: -moz-linear-gradient(#19324a, #203c5f, #19324a);
-  background-image: linear-gradient(#19324a, #203c5f, #19324a);
-  background-repeat: no-repeat;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF19324A', endColorstr='#FF203C5F', GradientType=1); }
+  background-position: center; }
 
 .logo img {
   width: 100%; }
 
 .colours {
   /* height of colours tile */
-  height: 242px;
+  min-height: 262px;
   text-align: center; }
 
 .pallets {
@@ -119,19 +89,19 @@ hr {
 
 /* individual pallet colours - 1 to 5 */
 .colour-one {
-  background: #203c5f; }
+  background: white; }
 
 .colour-two {
-  background: #217da0; }
+  background: white; }
 
 .colour-three {
-  background: #c6571b; }
+  background: white; }
 
 .colour-four {
-  background: #83af52; }
+  background: white; }
 
 .colour-five {
-  background: #3d3c3a; }
+  background: #646464; }
 
 .colour-hex-title {
   /* hex values of eact colour pallet */
@@ -141,6 +111,9 @@ hr {
   width: 109px;
   border: 8px solid white;
   display: inline-block; }
+
+.titles {
+  text-align: center; }
 
 .fonts h1 {
   font-size: 2em; }
@@ -161,7 +134,7 @@ hr {
   position: absolute;
   left: -0.5em;
   top: -0.3em;
-  color: #83af52; }
+  color: white; }
 
 .fonts p, .fonts a {
   font-family: Nexa-Light;
@@ -178,41 +151,41 @@ hr {
   transition: "all" "2s" "ease-in-out"; }
 
 .fonts a:hover, .fonts a:focus {
-  color: #c6571b; }
+  color: white; }
 
 .textures {
   /* height of textures tile */
-  height: 242px;
+  min-height: 262px;
   text-align: center; }
 
 .texture {
   /* global colour pallet size */
-  height: 220px;
-  width: 100px;
+  min-height: 250px;
+  width: 20%;
+  max-width: 100px;
   border: 8px solid white;
   display: inline-block;
-  margin: 0 4px;
-  -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.75); }
+  margin: 0 4px; }
 
 /* individual pallet colours - 1 to 5 */
 .texture-one {
-  background: url("../images/linedpaper.png");
+  background: url("");
   /* placeholder */ }
 
 .texture-two {
-  background: url("../images/linedpaper.png");
+  background: url("");
   /* placeholder */ }
 
 .texture-three {
-  background: url("../images/linedpaper.png");
+  background: url("");
   /* placeholder */ }
 
 .texture-four {
-  background: url("../images/linedpaper.png");
+  background: url("");
   /* placeholder */ }
 
 .texture-five {
-  background: url("../images/linedpaper.png");
+  background: url("");
   /* placeholder */ }
 
 .texture-title {
@@ -220,6 +193,7 @@ hr {
   font-size: 0.8em;
   text-align: center;
   height: 30px;
-  width: 109px;
+  width: 20%;
+  max-width: 100px;
   border: 8px solid white;
   display: inline-block; }
