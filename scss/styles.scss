@@ -12,9 +12,8 @@ $color-five:	#646464;
 $bgimage:	'';
 @include font-face( Nexa-Light, 'fonts', Nexa_Free_Light-webfont);
 $body-font: Nexa-Light;
+$header-font: 'Merriweather', serif;
 
-
- 
 
 * { 
 -webkit-box-sizing: border-box;  
@@ -78,9 +77,8 @@ hr {
 }
 
 .logo, .headers, .colours, .fonts, .textures {
-	font-family: 'Merriweather', serif;
+	font-family: $header-font; 
 }
-
 
 .logo {
 	background-position: center;
@@ -121,7 +119,7 @@ hr {
 	background: $color-five;
 }
 
-.colour-hex-title { /* hex values of eact colour pallet */
+.colour-hex-title { 
 	font-size: 0.8em;
 	text-align: center;
 	height: 30px;
@@ -157,7 +155,7 @@ hr {
 	position:absolute;
 	left:-0.5em;
 	top:-0.3em;
-	color:$color-four;
+	color:$color-five;
 }
 
 .fonts p , .fonts a{
@@ -193,22 +191,22 @@ hr {
 /* individual pallet colours - 1 to 5 */
 
 .texture-one {
-	background: url($bgimage); /* placeholder */
+	background: url($bgimage); 
 }
 .texture-two {
-	background: url($bgimage); /* placeholder */
+	background: url($bgimage);
 }
 .texture-three {
-	background: url($bgimage); /* placeholder */
+	background: url($bgimage);
 }
 .texture-four {
-	background: url($bgimage); /* placeholder */
+	background: url($bgimage);
 }
 .texture-five {
-	background: url($bgimage); /* placeholder */
+	background: url($bgimage);
 }
 
-.texture-title { /* hex values of eact colour pallet */
+.texture-title { 
 	font-size: 0.8em;
 	text-align: center;
 	height: 30px;

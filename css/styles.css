@@ -65,7 +65,7 @@ hr {
   height: 350px; }
 
 .logo, .headers, .colours, .fonts, .textures {
-  font-family: 'Merriweather', serif; }
+  font-family: "Merriweather", serif; }
 
 .logo {
   background-position: center; }
@@ -104,7 +104,6 @@ hr {
   background: #646464; }
 
 .colour-hex-title {
-  /* hex values of eact colour pallet */
   font-size: 0.8em;
   text-align: center;
   height: 30px;
@@ -134,7 +133,7 @@ hr {
   position: absolute;
   left: -0.5em;
   top: -0.3em;
-  color: white; }
+  color: #646464; }
 
 .fonts p, .fonts a {
   font-family: Nexa-Light;
@@ -169,27 +168,21 @@ hr {
 
 /* individual pallet colours - 1 to 5 */
 .texture-one {
-  background: url("");
-  /* placeholder */ }
+  background: url(""); }
 
 .texture-two {
-  background: url("");
-  /* placeholder */ }
+  background: url(""); }
 
 .texture-three {
-  background: url("");
-  /* placeholder */ }
+  background: url(""); }
 
 .texture-four {
-  background: url("");
-  /* placeholder */ }
+  background: url(""); }
 
 .texture-five {
-  background: url("");
-  /* placeholder */ }
+  background: url(""); }
 
 .texture-title {
-  /* hex values of eact colour pallet */
   font-size: 0.8em;
   text-align: center;
   height: 30px;
