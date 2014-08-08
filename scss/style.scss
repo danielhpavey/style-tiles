@@ -1,0 +1,216 @@
+@import "partials/mixins";
+@import "partials/font-face";
+@import "partials/transitions";
+@import "partials/threecolorgradient";
+
+$color-one: 	#ffffff;	
+$gradient: 	#ffffff;	
+$color-two: 	#ffffff;	
+$color-three: 	#ffffff;	
+$color-four: 	#ffffff;	
+$color-five:	#646464;
+$bgimage:	'';
+@include font-face( Nexa-Light, 'fonts', Nexa_Free_Light-webfont);
+$body-font: Nexa-Light;
+$header-font: 'Merriweather', serif;
+
+
+* { 
+-webkit-box-sizing: border-box;  
+    box-sizing:border-box;
+}
+
+body {
+	background: white;
+	width: 95%;
+	margin: 0 auto;
+	font-family: arial;
+	font-size:16px;
+}
+h1.main-titles {
+	margin: 1em;
+}
+.main-titles, h3 {
+	margin: 0 0 10px 0;
+	color:  $color-five;
+	text-align: center;
+}
+.web-link {
+	text-decoration: none;
+	color: #A2AF45;
+}
+hr {
+	margin: 2em 0;
+	border: 0;
+	height: 1px;
+	border-bottom: 1px dashed #333;
+}
+.column {
+	width: 100%;
+	padding: 0.5em;
+	color: $color-five;
+
+	@media screen and (min-width: 1024px){
+	float:left;
+	width:50%;
+	}
+}
+
+/* --------------------------------------------
+ 	|| start of design tiles for this site || 
+ -------------------------------------------- */
+
+.tile { /* main properties of each tile */
+	position: relative;
+	margin: 0 0 1em 0;
+	padding: 2%;
+	height: auto;
+	border: 1px dashed #333;
+	background: white;
+}
+
+.logo { /* height of logo tile */
+	height: 242px;
+}
+
+.headers {
+	height: 350px;
+}
+
+.logo, .headers, .colours, .fonts, .textures {
+	font-family: $header-font; 
+}
+
+.logo {
+	background-position: center;
+}
+
+.logo img {
+	width:100%;
+}
+
+.colours { /* height of colours tile */
+	min-height: 262px;
+	text-align: center;
+}
+.pallets { /* global colour pallet size */
+	height: 250px;
+	width: 19%;
+	display: inline-block;
+    border:1px solid;
+}
+
+/* individual pallet colours - 1 to 5 */
+
+.colour-one {
+	background:$color-one; 
+}
+.colour-two {
+	background: $color-two;
+}
+.colour-three {
+	background: $color-three;
+}
+.colour-four {
+	background: $color-four;
+}
+.colour-five {
+	background: $color-five;
+}
+
+.colour-hex-title { 
+	font-size: 0.8em;
+	text-align: center;
+	height: 30px;
+	width: 109px;
+	border: 8px solid white;
+	display: inline-block;
+}
+
+.titles{
+	text-align:center;
+}
+
+.fonts h1{
+	font-size:2em;
+}
+
+
+.fonts h2 {
+	font-size: 1.5em;
+}
+
+.fonts li{
+	font-family:$body-font;
+	font-size:1.1em;
+	list-style:none;
+	position:relative;
+	margin:5px 0;
+}
+
+.fonts li:before{
+	content:"\2022";
+	font-size:2em;
+	position:absolute;
+	left:-0.5em;
+	top:-0.3em;
+	color:$color-five;
+}
+
+.fonts p , .fonts a{
+	font-family:$body-font;
+	font-size: 1.1em;
+	letter-spacing:0.05em;
+}
+
+.fonts a{
+	color:inherit;
+	font-family:inherit;
+	 @include transition('all', '2s','ease-in-out');
+}
+
+.fonts a:hover, .fonts a:focus{
+	color:$color-three;
+}
+
+.textures { /* height of textures tile */
+	min-height: 262px;
+	text-align: center;
+}
+.texture { /* global colour pallet size */
+	min-height: 250px;
+	width:20%;
+	max-width: 100px;
+	border: 8px solid white;
+	display: inline-block;
+	margin: 0 4px;
+
+}
+
+/* individual pallet colours - 1 to 5 */
+
+.texture-one {
+	background: url($bgimage); 
+}
+.texture-two {
+	background: url($bgimage);
+}
+.texture-three {
+	background: url($bgimage);
+}
+.texture-four {
+	background: url($bgimage);
+}
+.texture-five {
+	background: url($bgimage);
+}
+
+.texture-title { 
+	font-size: 0.8em;
+	text-align: center;
+	height: 30px;
+	width:20%;
+	max-width: 100px;
+	border: 8px solid white;
+	display: inline-block;
+}
